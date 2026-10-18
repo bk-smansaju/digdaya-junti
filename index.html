@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGDAYA JUNTI - SMANSAJU Career Pathway</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #4f46e5, #312e81, #0f172a); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
+        .robot-float { animation: float 3s ease-in-out infinite; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER & NAVIGASI MOBILE FRIENDLY -->
+    <header class="sticky top-0 z-50 bg-slate-900/85 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('beranda')">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-lg shadow-indigo-500/30">DJ</div>
+                    <div>
+                        <h1 class="font-extrabold text-white tracking-wider text-sm sm:text-lg">DIGDAYA JUNTI</h1>
+                        <p class="text-[10px] sm:text-[11px] text-indigo-400 font-semibold tracking-wide uppercase">Bimbingan Karier SMANSAJU</p>
+                    </div>
+                </div>
+                <button onclick="switchTab('chatbot')" class="robot-float group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all flex items-center gap-2 border border-emerald-400/30">
+                    <span>🤖 AI BK</span>
+                    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white animate-ping"></span>
+                </button>
+            </div>
+
+            <!-- Navigasi Horizontal Scroll untuk HP -->
+            <div class="overflow-x-auto no-scrollbar pb-1">
+                <nav class="flex space-x-1.5 bg-slate-800/60 p-1.5 rounded-xl border border-slate-700/50 text-xs font-medium text-slate-300 w-max min-w-full">
+                    <button onclick="switchTab('beranda')" class="px-3.5 py-2 rounded-lg transition tab-btn text-white bg-indigo-600 shadow-md whitespace-nowrap" data-target="beranda">Beranda</button>
+                    <button onclick="switchTab('jalur')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="jalur">🎓 Akademik</button>
+                    <button onclick="switchTab('vokasi')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="vokasi">🏭 Vokasi</button>
+                    <button onclick="switchTab('wirausaha')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="wirausaha">💼 Wirausaha</button>
+                    <button onclick="switchTab('pranikah')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="pranikah">💍 Pranikah</button>
+                    <button onclick="switchTab('mbti')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="mbti">🧠 Tes MBTI</button>
+                    <button onclick="switchTab('rpg')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="rpg">🎮 Mini RPG</button>
+                    <button onclick="switchTab('jurnal')" class="px-3.5 py-2 rounded-lg transition tab-btn hover:text-white hover:bg-slate-700/50 whitespace-nowrap" data-target="jurnal">📥 Jurnal</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+
+        <!-- TAB 1: BERANDA -->
+        <section id="beranda" class="tab-content space-y-12">
+            <div class="relative hero-gradient rounded-3xl p-6 sm:p-16 text-white overflow-hidden shadow-2xl border border-indigo-500/20">
+                <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none hidden sm:block">
+                    <span class="text-[220px] font-black">DJ</span>
+                </div>
+                <div class="max-w-2xl relative z-10 space-y-5">
+                    <div class="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest border border-indigo-400/30">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Eksplorasi Mandiri SMANSAJU
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Masa Depanmu, <br>Keputusanmu.</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Pelajari semua opsi karier via portal resmi (SNPMB, KIP-K, Luarkampus, BPVP, SIMKAH), mainkan simulasi kasusnya, & rekam hasil MBTI-mu.</p>
+                    <div class="pt-3 flex flex-wrap gap-3">
+                        <button onclick="switchTab('mbti')" class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-xl hover:bg-indigo-500 transition">🧠 Mulai Tes MBTI</button>
+                        <button onclick="switchTab('jalur')" class="bg-slate-800 text-white border border-slate-700 px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-xl hover:bg-slate-700 transition">🎓 Panduan Kuliah</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Petunjuk Alur -->
+            <div class="text-center space-y-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white">Alur Bimbingan Mandiri</h3>
+                <p class="text-xs text-slate-400">Ikuti 3 langkah ini sebelum berkonsultasi dengan Guru BK.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 text-center space-y-3">
+                    <div class="w-10 h-10 mx-auto bg-blue-500/10 text-blue-400 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                    <strong class="text-white block text-sm">Eksplorasi Link Resmi</strong>
+                    <p class="text-xs text-slate-400">Pahami info dari SNPMB, Luarkampus, BP2MI, OSS, dan SIMKAH.</p>
+                </div>
+                <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 text-center space-y-3">
+                    <div class="w-10 h-10 mx-auto bg-indigo-500/10 text-indigo-400 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                    <strong class="text-white block text-sm">Ikuti MBTI & RPG</strong>
+                    <p class="text-xs text-slate-400">Cek kepribadianmu dan latih mental kerjamu di 3 skenario RPG.</p>
+                </div>
+                <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 text-center space-y-3">
+                    <div class="w-10 h-10 mx-auto bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                    <strong class="text-white block text-sm">Konsultasi Terarah</strong>
+                    <p class="text-xs text-slate-400">Bawa hasil eksplorasi & jurnalmu untuk dianalisis oleh Guru BK.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: JALUR AKADEMIK (LENGKAP DENGAN LINK RESMI) -->
+        <section id="jalur" class="tab-content hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase border border-blue-500/20">Portal Kuliah & Beasiswa</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Jalur Akademik (PTN & Swasta)</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- SNBP & SNBT -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-xl">🎓</div>
+                        <h3 class="text-base font-bold text-white">SNBP & SNBT (UTBK)</h3>
+                        <ul class="text-xs text-slate-300 list-disc pl-4 space-y-1">
+                            <li><strong>SNBP:</strong> Berdasar nilai rapor (Sem 1-5), status eligible, & portofolio (seni/olahraga).</li>
+                            <li><strong>SNBT:</strong> Tes TPS, Literasi, MTK. Bisa pilih 4 prodi D3/D4/S1. Waktu ±195 menit.</li>
+                        </ul>
+                    </div>
+                    <a href="https://snpmb.id" target="_blank" class="w-full text-center bg-blue-600 hover:bg-blue-500 text-white py-2.5 rounded-xl font-bold text-xs mt-4">🌐 Portal Resmi SNPMB</a>
+                </div>
+
+                <!-- KIP KULIAH -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-sky-500/10 text-sky-400 rounded-2xl flex items-center justify-center text-xl">💳</div>
+                        <h3 class="text-base font-bold text-white">KIP-Kuliah (Pemerintah)</h3>
+                        <ul class="text-xs text-slate-300 list-disc pl-4 space-y-1">
+                            <li>Bantuan biaya pendidikan untuk keluarga kurang mampu.</li>
+                            <li><strong>Dokumen:</strong> NIK/NISN, SKTM/KIP, Slip Gaji Ortu, Foto Rumah (Depan & Dalam).</li>
+                        </ul>
+                    </div>
+                    <a href="https://kip-kuliah.kemdikbud.go.id" target="_blank" class="w-full text-center bg-sky-600 hover:bg-sky-500 text-white py-2.5 rounded-xl font-bold text-xs mt-4">🌐 Portal KIP-Kuliah</a>
+                </div>
+
+                <!-- LUARKAMPUS -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center text-xl">🌟</div>
+                        <h3 class="text-base font-bold text-white">Beasiswa Swasta & Info</h3>
+                        <ul class="text-xs text-slate-300 list-disc pl-4 space-y-1">
+                            <li>Portal informasi alternatif selain kampus negeri.</li>
+                            <li>Menyediakan database beasiswa kampus swasta dan panduan persiapan karier mahasiswa.</li>
+                        </ul>
+                    </div>
+                    <a href="https://luarkampus.id" target="_blank" class="w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white py-2.5 rounded-xl font-bold text-xs mt-4">🌐 Portal Luarkampus</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: VOKASI & GLOBAL (LENGKAP DENGAN LINK RESMI) -->
+        <section id="vokasi" class="tab-content hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-bold uppercase border border-amber-500/20">Kerja & Sertifikasi</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Jalur Vokasi & Karier Global</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- BKK & JOB PORTAL -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-xl">🔍</div>
+                        <h3 class="text-base font-bold text-white">BKK, JobStreet & Glints</h3>
+                        <p class="text-xs text-slate-300">Pantau mading BKK sekolah untuk lowongan mitra pabrik. Untuk loker modern/kantoran, manfaatkan portal profesional di bawah.</p>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-4">
+                        <a href="https://www.jobstreet.co.id" target="_blank" class="w-full bg-slate-700 hover:bg-slate-600 text-white text-center py-2 rounded-xl text-xs font-bold">🌐 Buka JobStreet</a>
+                        <a href="https://glints.com/id" target="_blank" class="w-full bg-slate-700 hover:bg-slate-600 text-white text-center py-2 rounded-xl text-xs font-bold">🌐 Buka Glints</a>
+                    </div>
+                </div>
+
+                <!-- PELATIHAN KEMNAKER -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-xl">📜</div>
+                        <h3 class="text-base font-bold text-white">Sertifikasi Kompetensi</h3>
+                        <p class="text-xs text-slate-300">Ikuti pelatihan vokasi bersertifikat resmi (K3 Umum, Bahasa, Desain) di BPVP Kemnaker untuk modal melamar kerja.</p>
+                    </div>
+                    <a href="https://sso.kemnaker.go.id" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-center py-2.5 rounded-xl font-bold text-xs mt-4">🌐 Info BPVP Kemnaker</a>
+                </div>
+
+                <!-- BP2MI -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-xl">🌍</div>
+                        <h3 class="text-base font-bold text-white">Kerja Luar Negeri (G to G)</h3>
+                        <p class="text-xs text-slate-300">Hindari calo ilegal! Daftar program resmi penempatan pekerja migran ke Jepang, Jerman, & Korea melalui BP2MI.</p>
+                    </div>
+                    <a href="https://siskop2mi.bp2mi.go.id" target="_blank" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white text-center py-2.5 rounded-xl font-bold text-xs mt-4">🌐 Portal Sisko P2MI</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: WIRAUSAHA (NIB & HALAL) -->
+        <section id="wirausaha" class="tab-content hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full text-xs font-bold uppercase border border-purple-500/20">Karier Mandiri</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Legalitas UMKM & Wirausaha</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- OSS -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 sm:p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-xl font-bold">📄</div>
+                        <h3 class="text-lg font-bold text-white">NIB (Nomor Induk Berusaha)</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Identitas wajib pelaku UMKM. Syarat untuk mengajukan KUR Bank, kerja sama mitra, dan perlindungan usaha. Prosesnya gratis dan cepat secara online.</p>
+                    </div>
+                    <a href="https://oss.go.id" target="_blank" class="w-full bg-purple-600 hover:bg-purple-500 text-white text-center py-3 rounded-xl font-bold text-xs">🌐 Buat NIB di OSS.go.id</a>
+                </div>
+
+                <!-- HALAL BPJPH -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 sm:p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-pink-500/10 text-pink-400 rounded-2xl flex items-center justify-center text-xl font-bold">✨</div>
+                        <h3 class="text-lg font-bold text-white">Sertifikasi Halal Kemenag</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Wajib bagi produk kuliner/makanan olahan. UMKM bisa mendaftar program Sehati (Sertifikasi Halal Gratis) via *self-declare* BPJPH Kemenag.</p>
+                    </div>
+                    <a href="https://bpjph.halal.go.id" target="_blank" class="w-full bg-pink-600 hover:bg-pink-500 text-white text-center py-3 rounded-xl font-bold text-xs">🌐 Portal Halal BPJPH</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: PRANIKAH (LINK EFEKTIF: SIMKAH & ELSIMIL) -->
+        <section id="pranikah" class="tab-content hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="bg-rose-500/10 text-rose-400 px-3 py-1 rounded-full text-xs font-bold uppercase border border-rose-500/20">Keluarga Sehat</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Persiapan Pranikah Resmi</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- SIMKAH KUA -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 sm:p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-rose-500/10 text-rose-400 rounded-2xl flex items-center justify-center text-xl font-bold">💍</div>
+                        <h3 class="text-lg font-bold text-white">SIMKAH & Bimwin KUA</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Sistem Informasi Manajemen Nikah dari Kemenag. Tempat mendaftar nikah online & mengakses jadwal <strong>Bimbingan Perkawinan (Bimwin)</strong> terkait literasi keuangan & psikologi rumah tangga.</p>
+                    </div>
+                    <a href="https://simkah.kemenag.go.id" target="_blank" class="w-full bg-rose-600 hover:bg-rose-500 text-white text-center py-3 rounded-xl font-bold text-xs">🌐 Buka Portal SIMKAH</a>
+                </div>
+
+                <!-- ELSIMIL BKKBN -->
+                <div class="bg-slate-800/40 border border-slate-700/60 p-6 sm:p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-teal-500/10 text-teal-400 rounded-2xl flex items-center justify-center text-xl font-bold">👶</div>
+                        <h3 class="text-lg font-bold text-white">Elsimil BKKBN</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Aplikasi <strong>Elektronik Siap Nikah & Hamil</strong>. Wajib diisi oleh calon pengantin 3 bulan sebelum menikah untuk skrining kesehatan reproduksi dan pencegahan Stunting pada anak.</p>
+                    </div>
+                    <a href="https://elsimil.bkkbn.go.id" target="_blank" class="w-full bg-teal-600 hover:bg-teal-500 text-white text-center py-3 rounded-xl font-bold text-xs">🌐 Buka Portal ELSIMIL</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 6: TES MBTI 12 SOAL (TETAP LENGKAP & REKAM DATA) -->
+        <section id="mbti" class="tab-content hidden space-y-6">
+            <div class="bg-slate-800/50 border border-slate-700/60 p-5 sm:p-8 rounded-3xl max-w-3xl mx-auto space-y-5">
+                <div class="text-center space-y-1">
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">Tes MBTI Karier SMANSAJU</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm">Jawab 12 pertanyaan ini dengan jujur agar analisis Guru BK akurat.</p>
+                </div>
+                
+                <div id="mbti-form-container" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 bg-indigo-950/40 rounded-xl border border-indigo-500/30">
+                        <div>
+                            <label class="block text-[11px] font-bold text-slate-300 mb-1">Nama Lengkap Siswa:</label>
+                            <input type="text" id="siswa-nama" class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white" placeholder="Contoh: Budi Santoso">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-slate-300 mb-1">Kelas:</label>
+                            <input type="text" id="siswa-kelas" class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white" placeholder="Contoh: XII IPA 1">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">1. Energi pulih dengan cara?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q1" value="E"> Bersama teman (Nongkrong/Organisasi).</label><label class="flex items-center gap-2"><input type="radio" name="q1" value="I"> Sendirian (Me-time/Di rumah).</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">2. Mengerjakan tugas lebih suka?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q2" value="S"> Instruksi jelas & nyata.</label><label class="flex items-center gap-2"><input type="radio" name="q2" value="N"> Berimajinasi & teori.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">3. Saat memutuskan sesuatu mengandalkan?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q3" value="T"> Logika objektif/Fakta.</label><label class="flex items-center gap-2"><input type="radio" name="q3" value="F"> Perasaan & Harmoni.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">4. Perencanaan jadwal harianmu?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q4" value="J"> Terstruktur/To-do list.</label><label class="flex items-center gap-2"><input type="radio" name="q4" value="P"> Fleksibel & spontan.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">5. Di kelas, gaya komunikasimu?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q5" value="E"> Suka memimpin/bicara.</label><label class="flex items-center gap-2"><input type="radio" name="q5" value="I"> Banyak mendengarkan.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">6. Mempercayai informasi dari?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q6" value="S"> Fakta empiris lapangan.</label><label class="flex items-center gap-2"><input type="radio" name="q6" value="N"> Pola/prediksi masa depan.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">7. Menyikapi sebuah masalah dengan?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q7" value="T"> Menegakkan aturan kaku.</label><label class="flex items-center gap-2"><input type="radio" name="q7" value="F"> Memikirkan perasaan orang.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">8. Cara menghadapi Deadline (tugas)?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q8" value="J"> Dikerjakan jauh hari.</label><label class="flex items-center gap-2"><input type="radio" name="q8" value="P"> The Power of Kepepet.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">9. Lingkungan belajar idamanmu?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q9" value="E"> Ramai & Kolaboratif.</label><label class="flex items-center gap-2"><input type="radio" name="q9" value="I"> Sepi & Fokus Sendiri.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">10. Jika diajarkan ilmu baru?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q10" value="S"> Minta contoh praktiknya.</label><label class="flex items-center gap-2"><input type="radio" name="q10" value="N"> Pelajari konsep teorinya.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">11. Memberi kritik ke teman?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q11" value="T"> Jujur & tegas tanpa basa-basi.</label><label class="flex items-center gap-2"><input type="radio" name="q11" value="F"> Halus agar tidak tersinggung.</label></div></div>
+                    <div class="space-y-2 p-3 bg-slate-900/40 rounded-xl border border-slate-800"><label class="block text-xs font-bold text-slate-200">12. Merencanakan lulus SMA?</label><div class="text-xs space-y-1"><label class="flex items-center gap-2"><input type="radio" name="q12" value="J"> Terjadwal & pasti langkahnya.</label><label class="flex items-center gap-2"><input type="radio" name="q12" value="P"> Lihat sikon & peluang yang ada.</label></div></div>
+
+                    <button onclick="submitMBTI12()" class="w-full bg-indigo-600 text-white py-3.5 rounded-xl font-bold text-sm hover:bg-indigo-500 shadow-lg">Analisis & Kirim ke BK</button>
+                </div>
+                <div id="mbti-result" class="hidden p-4 bg-indigo-950/70 border border-indigo-500/40 rounded-xl text-indigo-100 space-y-2"></div>
+            </div>
+        </section>
+
+        <!-- TAB 7: RPG KASUS (TETAP 3x3) -->
+        <section id="rpg" class="tab-content hidden space-y-6">
+            <div class="bg-slate-800/50 border border-slate-700/60 p-5 sm:p-10 rounded-3xl max-w-2xl mx-auto space-y-5">
+                <div class="text-center space-y-1">
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">Mini RPG: Simulasi Karier</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm">Uji logikamu memecahkan 3 studi kasus di tiap jalur.</p>
+                </div>
+
+                <div id="rpg-select-role" class="space-y-3">
+                    <button onclick="startRpgJourney('kuliah')" class="w-full text-left p-3.5 bg-blue-950/40 border border-blue-500/30 rounded-xl hover:border-blue-400 transition flex items-center gap-3">
+                        <span class="text-xl sm:text-2xl">🎓</span><div><strong class="text-white block text-sm">Kasus PTN & Beasiswa</strong><span class="text-[11px] sm:text-xs text-slate-400">Strategi masuk kuliah & manajemen IPK.</span></div>
+                    </button>
+                    <button onclick="startRpgJourney('pabrik')" class="w-full text-left p-3.5 bg-amber-950/40 border border-amber-500/30 rounded-xl hover:border-amber-400 transition flex items-center gap-3">
+                        <span class="text-xl sm:text-2xl">🏭</span><div><strong class="text-white block text-sm">Kasus Industri & Global</strong><span class="text-[11px] sm:text-xs text-slate-400">Prosedur K3 mesin & jalur imigrasi resmi.</span></div>
+                    </button>
+                    <button onclick="startRpgJourney('wirausaha')" class="w-full text-left p-3.5 bg-purple-950/40 border border-purple-500/30 rounded-xl hover:border-purple-400 transition flex items-center gap-3">
+                        <span class="text-xl sm:text-2xl">💼</span><div><strong class="text-white block text-sm">Kasus Bisnis & Legalitas</strong><span class="text-[11px] sm:text-xs text-slate-400">Manajemen KUR, izin OSS, & Label Halal.</span></div>
+                    </button>
+                </div>
+
+                <div id="rpg-game-box" class="hidden space-y-3">
+                    <div class="flex items-center justify-between text-[10px] sm:text-xs text-indigo-400 font-bold uppercase tracking-wider">
+                        <span id="rpg-case-counter"></span>
+                        <span id="rpg-score-tracker"></span>
+                    </div>
+                    <div class="p-3 sm:p-4 bg-slate-900 border border-slate-700 rounded-xl text-slate-200 text-xs sm:text-sm leading-relaxed" id="rpg-story"></div>
+                    <div class="space-y-2" id="rpg-options"></div>
+                    <button onclick="resetRpgJourney()" class="text-xs text-slate-400 hover:underline pt-2 block">Berhenti Main</button>
+                </div>
+                <div id="rpg-result" class="hidden p-4 bg-slate-900 border border-slate-700 rounded-xl text-xs sm:text-sm space-y-2"></div>
+            </div>
+        </section>
+
+        <!-- TAB 8: JURNAL -->
+        <section id="jurnal" class="tab-content hidden space-y-8">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase border border-indigo-500/20">Ruang Konsultasi</span>
+                <h2 class="text-2xl font-extrabold text-white">Catat di Jurnal BK</h2>
+                <p class="text-slate-400 text-xs">Pindahkan tipe MBTI dan kesimpulanmu ke worksheet ini.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4">
+                <a href="https://drive.google.com/drive/folders/1qCw_endfF8nv8Y_8Q83GOBHMLFU8r3PU?usp=sharing" target="_blank" class="bg-red-600 hover:bg-red-500 text-white px-6 py-3.5 rounded-xl font-bold text-xs text-center shadow-lg">📁 Download PDF (G-Drive)</a>
+                <a href="https://canva.link/fdtppkxsujoti2o" target="_blank" class="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-3.5 rounded-xl font-bold text-xs text-center shadow-lg">🎨 Isi Digital via Canva</a>
+            </div>
+        </section>
+
+        <!-- TAB 9: CHATBOT AI -->
+        <section id="chatbot" class="tab-content hidden space-y-4">
+            <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl max-w-2xl mx-auto overflow-hidden flex flex-col h-[500px] sm:h-[580px] backdrop-blur-md">
+                <div class="bg-slate-900 border-b border-slate-800 p-3 sm:p-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-2 sm:space-x-3">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center font-bold text-white text-sm sm:text-base">🤖</div>
+                        <div>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">AI BK Pintar SMANSAJU</h4>
+                            <p class="text-[10px] sm:text-xs text-slate-400">Tanya KIP, SNBP, NIB, SIMKAH, dll</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="chat-messages" class="flex-1 p-4 sm:p-5 overflow-y-auto space-y-3 sm:space-y-4 text-xs sm:text-sm bg-slate-900/40">
+                    <div class="flex items-start gap-2 sm:gap-3">
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-[10px] sm:text-xs shrink-0">🤖</div>
+                        <div class="bg-slate-800 border border-slate-700 p-3 rounded-2xl rounded-tl-sm text-slate-200 max-w-[90%] sm:max-w-[85%] leading-relaxed">
+                            Halo! Bingung cari website resmi SNPMB, pusing mikirin biaya (KIP-K), cari beasiswa di Luarkampus, atau mau cari tau soal Elsimil/Simkah? Ketik aja pertanyaanmu di bawah!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombol Prompt Scrollable -->
+                <div class="p-2 sm:p-3 bg-slate-900/60 border-t border-slate-800 flex gap-2 overflow-x-auto no-scrollbar">
+                    <button onclick="sendQuickPrompt('Link luarkampus dan KIP-K')" class="bg-sky-500/10 text-sky-400 border border-sky-500/20 px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap">💳 Info Beasiswa</button>
+                    <button onclick="sendQuickPrompt('Syarat buat NIB di OSS')" class="bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap">💼 NIB Usaha</button>
+                    <button onclick="sendQuickPrompt('Kerja luar negeri resmi')" class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap">🌍 Kerja LN (BP2MI)</button>
+                    <button onclick="sendQuickPrompt('Fungsi web SIMKAH dan ELSIMIL')" class="bg-rose-500/10 text-rose-400 border border-rose-500/20 px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap">💍 Info Pranikah</button>
+                </div>
+
+                <div class="p-3 bg-slate-900 border-t border-slate-800 flex gap-2">
+                    <input type="text" id="chat-input" placeholder="Tanya sesuatu..." class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:ring-1 focus:ring-indigo-500" onkeypress="if(event.key === 'Enter') handleUserChat()">
+                    <button onclick="handleUserChat()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold">Kirim</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900/50 py-6 mt-6 text-center text-[10px] sm:text-xs text-slate-500 px-4">
+        <p>&copy; 2026 DIGDAYA JUNTI SMANSAJU - Bimbingan Cerdas via Portal Resmi.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/MASUKKAN_URL_WEB_APP_ANDA_DI_SINI/exec";
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('text-white', 'bg-indigo-600', 'shadow-md');
+                btn.classList.add('hover:text-white', 'hover:bg-slate-700/50');
+            });
+            const activeBtn = document.querySelector(`[data-target="${tabId}"]`);
+            if(activeBtn) {
+                activeBtn.classList.remove('hover:text-white', 'hover:bg-slate-700/50');
+                activeBtn.classList.add('text-white', 'bg-indigo-600', 'shadow-md');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- SISTEM TES MBTI ---
+        function submitMBTI12() {
+            const nama = document.getElementById('siswa-nama').value.trim();
+            const kelas = document.getElementById('siswa-kelas').value.trim();
+            const resultBox = document.getElementById('mbti-result');
+            resultBox.classList.remove('hidden');
+
+            if(!nama || !kelas) {
+                resultBox.innerHTML = `⚠️ Harap isi <strong>Nama</strong> dan <strong>Kelas</strong>.`; return;
+            }
+
+            let counts = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0 };
+            for(let k = 1; k <= 12; k++) {
+                const ans = document.querySelector(`input[name="q${k}"]:checked`);
+                if(!ans) { resultBox.innerHTML = `⚠️ Jawab semua pertanyaan! (Soal ${k} belum diisi)`; return; }
+                counts[ans.value]++;
+            }
+
+            const typeCode = (counts.E >= counts.I ? 'E' : 'I') + (counts.S >= counts.N ? 'S' : 'N') + (counts.T >= counts.F ? 'T' : 'F') + (counts.J >= counts.P ? 'J' : 'P');
+            
+            resultBox.innerHTML = `
+                <div class="border-b border-indigo-500/30 pb-2 mb-2">
+                    <span class="text-[10px] text-indigo-400 font-bold uppercase">Profil MBTI Kamu:</span>
+                    <h4 class="text-lg font-bold text-white">${nama} (${kelas}) - ${typeCode}</h4>
+                </div>
+                <p class="text-xs text-indigo-200">Menyimpan data...</p>
+            `;
+
+            if(GOOGLE_SHEET_URL.includes("MASUKKAN_URL")) {
+                resultBox.innerHTML += `<p class="text-[11px] text-amber-300 mt-1">Selesai! Catat tipe <strong>${typeCode}</strong> ini di Jurnalmu.</p>`;
+                return;
+            }
+
+            fetch(GOOGLE_SHEET_URL, {
+                method: 'POST', mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nama: nama, kelas: kelas, mbti: typeCode })
+            }).then(() => {
+                resultBox.innerHTML = `<div class="border-b border-indigo-500/30 pb-2 mb-2"><span class="text-[10px] text-emerald-400 font-bold uppercase">Terekam di BK!</span><h4 class="text-lg font-bold text-white">${nama} - ${typeCode}</h4></div><p class="text-xs text-emerald-200">✅ Jangan lupa catat di Jurnal untuk konsultasi!</p>`;
+            }).catch(() => {
+                resultBox.innerHTML += `<p class="text-[11px] text-red-300 mt-1">Tipe kamu: <strong>${typeCode}</strong>. (Gagal kirim server).</p>`;
+            });
+        }
+
+        // --- SISTEM MINI RPG 3 KASUS ---
+        const rpgScenarios = {
+            kuliah: [
+                { story: "Kasus 1: Nilai rapormu semester 1-4 standar, tapi sem 5 melesat naik. Guru BK menyuruh coba SNBP. Keputusanmu?", options: [ {text: "Pilih prodi dengan analisis grafik nilai dan persaingan.", correct: true, msg: "Tepat! Analisis rasional mengalahkan gengsi di SNBP."}, {text: "Pilih Kedokteran UI langsung (Nekat).", correct: false, msg: "Bahaya! SNBP butuh realisme rekam jejak, bukan tebak-tebakan."}, {text: "Tidak ikut SNBP karena takut gagal.", correct: false, msg: "Salah besar, buang-buang kesempatan gratis."} ] },
+                { story: "Kasus 2: Kamu lolos SNBT, tapi bingung cari beasiswa swasta/pemerintah. Apa tindakanmu?", options: [ {text: "Cek portal KIP-K Kemdikbud & Luarkampus.id.", correct: true, msg: "Benar! Luarkampus menyediakan database beasiswa lengkap di luar KIP."}, {text: "Pinjam uang di Pinjol untuk bayar UKT.", correct: false, msg: "Bencana finansial! Pinjol akan menghancurkan ekonomi keluarga."}, {text: "Memalsukan slip gaji orang tua.", correct: false, msg: "Penipuan data! Otomatis didiskualifikasi & dipidana."} ] },
+                { story: "Kasus 3: Di kampus, kamu harus atur waktu antara Ormawa (Organisasi) dan akademik untuk pertahankan beasiswa.", options: [ {text: "Atur manajemen waktu, IPK minimal 3.0 wajib dijaga.", correct: true, msg: "Hebat! Prioritas utama mahasiswa beasiswa adalah akademik."}, {text: "Nongkrong terus karena mumpung gratis.", correct: false, msg: "Beasiswa akan dicabut jika IPK anjlok!"}, {text: "Jadi mahasiswa kupu-kupu ekstrim (anti sosial).", correct: false, msg: "Rugi koneksi kerja untuk masa depan."} ] }
+            ],
+            pabrik: [
+                { story: "Kasus 1: Saat jam sibuk, mesin produksi error dan mengeluarkan asap. Kamu buruh magang.", options: [ {text: "Matikan power mesin (SOP K3) dan lapor teknisi senior.", correct: true, msg: "Keren! Di industri, Keselamatan Kerja (K3) adalah nyawa utama."}, {text: "Disiram air biar cepat dingin.", correct: false, msg: "Meledak! Mesin elektronik tidak boleh kena air sembarangan."}, {text: "Biarkan saja karena bukan mesinmu.", correct: false, msg: "Sikap tidak peduli bisa memicu kebakaran pabrik."} ] },
+                { story: "Kasus 2: HRD menjanjikan promosi buat yang punya sertifikat K3 Umum/Kompetensi Khusus.", options: [ {text: "Buka portal sso.kemnaker.go.id ikut kelas BPVP gratis.", correct: true, msg: "Tepat! Sertifikat kompetensi BPVP sangat dihargai oleh industri."}, {text: "Beli sertifikat palsu di internet.", correct: false, msg: "Dipecat dan di-blacklist HRD lintas pabrik!"}, {text: "Ngotot minta promosi tanpa sertifikat.", correct: false, msg: "Tanpa bukti kompetensi, HRD tidak akan acc."} ] },
+                { story: "Kasus 3: Kamu ditawari agen untuk kerja ke Jepang gajinya Rp 20 juta, tapi berangkat besok pakai visa turis.", options: [ {text: "Tolak tegas. Daftar resmi via Sisko P2MI / Program G to G.", correct: true, msg: "Pintar! Jangan mau jadi pekerja migran ilegal (TPPO)."}, {text: "Terima saja mumpung cepat kaya.", correct: false, msg: "Ini perdagangan orang! Kamu bisa dipenjara/dideportasi."}, {text: "Gadaikan motor orang tua untuk bayar agen bodong.", correct: false, msg: "Double rugi. Uang hilang, berangkat batal."} ] }
+            ],
+            wirausaha: [
+                { story: "Kasus 1: Dagangan dimsum kamu laku keras. Teman menyarankan buka cabang dan mendaftarkan legalitas.", options: [ {text: "Buka web oss.go.id, daftarkan NIB gratis.", correct: true, msg: "Langkah cerdas! NIB (Nomor Induk Berusaha) adalah pondasi usahamu."}, {text: "Langsung buka 5 cabang ngutang dari rentenir.", correct: false, msg: "Bunuh diri finansial sebelum usaha stabil."}, {text: "Main game seharian karena merasa sudah kaya.", correct: false, msg: "Mental wirausaha yang buruk."} ] },
+                { story: "Kasus 2: Minimarket mau terima produkmu, syaratnya harus ada logo Halal dari BPJPH.", options: [ {text: "Buka bpjph.halal.go.id, daftar program Sehati (gratis).", correct: true, msg: "Tepat! Kemenag sediakan kuota sertifikasi halal gratis buat UMKM."}, {text: "Gambar sendiri tulisan HALAL pakai spidol.", correct: false, msg: "Pemalsuan! Bisa dituntut pidana UU Perlindungan Konsumen."}, {text: "Batalin kontrak sama minimarket.", correct: false, msg: "Kesempatan emas scaling-up usaha hilang begitu saja."} ] },
+                { story: "Kasus 3: Modal menipis. Bank menawarkan KUR UMKM bunganya sangat kecil, syaratnya?", options: [ {text: "Tunjukkan cetakan NIB asli dan pembukuan uang masuk-keluar.", correct: true, msg: "Langkah pro! Pembukuan rapi mempermudah cairnya KUR bank."}, {text: "Pakai uang KUR untuk modif motor balap.", correct: false, msg: "Mencampur uang pribadi & usaha adalah penyebab utama bangkrut."}, {text: "Pinjam pinjol ilegal tanpa izin.", correct: false, msg: "Teror debt collector akan menghancurkan bisnismu."} ] }
+            ]
+        };
+
+        let currentRpg = [], rpgIdx = 0, rpgScr = 0;
+
+        function startRpgJourney(role) {
+            currentRpg = rpgScenarios[role]; rpgIdx = 0; rpgScr = 0;
+            document.getElementById('rpg-select-role').classList.add('hidden');
+            document.getElementById('rpg-game-box').classList.remove('hidden');
+            document.getElementById('rpg-result').classList.add('hidden');
+            loadRpgCase();
+        }
+
+        function loadRpgCase() {
+            if(rpgIdx >= currentRpg.length) {
+                const res = document.getElementById('rpg-result');
+                document.getElementById('rpg-game-box').classList.add('hidden');
+                res.classList.remove('hidden');
+                res.innerHTML = `<div class="p-5 bg-indigo-950/80 rounded-xl text-center"><h4 class="text-lg font-bold text-white mb-2">🏆 Simulasi Selesai</h4><p class="text-xs text-indigo-200">Skor: ${rpgScr} dari 3</p><button onclick="document.getElementById('rpg-select-role').classList.remove('hidden'); this.parentElement.parentElement.classList.add('hidden');" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg text-xs font-bold w-full">Kembali</button></div>`;
+                return;
+            }
+            const c = currentRpg[rpgIdx];
+            document.getElementById('rpg-case-counter').innerText = `Kasus ${rpgIdx + 1}/3`;
+            document.getElementById('rpg-score-tracker').innerText = `Skor: ${rpgScr}`;
+            document.getElementById('rpg-story').innerHTML = c.story;
+            
+            document.getElementById('rpg-options').innerHTML = c.options.map((o) => 
+                `<button onclick="answerRpg(${o.correct}, '${encodeURIComponent(o.msg)}')" class="w-full text-left p-3 bg-slate-900 border border-slate-700 hover:border-indigo-500 rounded-lg text-xs transition text-slate-200">${o.text}</button>`
+            ).join('');
+            document.getElementById('rpg-result').classList.add('hidden');
+        }
+
+        function answerRpg(isC, msgEnc) {
+            if(isC) rpgScr++;
+            const res = document.getElementById('rpg-result');
+            res.classList.remove('hidden');
+            res.innerHTML = `<div class="p-3 ${isC ? 'bg-emerald-950/60 border-emerald-500/40 text-emerald-200' : 'bg-amber-950/60 border-amber-500/40 text-amber-200'} border rounded-lg"><strong class="text-xs block mb-1">${isC ? '✅ Tepat!' : '❌ Berisiko!'}</strong><p class="text-[11px]">${decodeURIComponent(msgEnc)}</p><button onclick="rpgIdx++; loadRpgCase();" class="mt-2 bg-indigo-600 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold">Lanjut &rarr;</button></div>`;
+            document.getElementById('rpg-options').innerHTML = '';
+        }
+
+        function resetRpgJourney() {
+            document.getElementById('rpg-select-role').classList.remove('hidden');
+            document.getElementById('rpg-game-box').classList.add('hidden');
+            document.getElementById('rpg-result').classList.add('hidden');
+        }
+
+        // --- CHATBOT AI CERDAS ---
+        function appendMsg(sender, txt) {
+            const box = document.getElementById('chat-messages');
+            const isU = sender === 'user';
+            box.innerHTML += `<div class="flex items-start gap-2 ${isU ? 'flex-row-reverse' : ''}"><div class="w-7 h-7 rounded-lg ${isU ? 'bg-emerald-600' : 'bg-indigo-600'} text-white flex items-center justify-center font-bold text-[10px] shrink-0">${isU ? '👤' : '🤖'}</div><div class="${isU ? 'bg-emerald-950/80 border-emerald-500/30' : 'bg-slate-800 border-slate-700'} border p-3 rounded-xl ${isU?'rounded-tr-sm':'rounded-tl-sm'} text-xs text-slate-200 max-w-[85%] leading-relaxed">${txt}</div></div>`;
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function sendQuickPrompt(t) { document.getElementById('chat-input').value = t; handleUserChat(); }
+
+        function handleUserChat() {
+            const inp = document.getElementById('chat-input');
+            const txt = inp.value.trim();
+            if(!txt) return;
+            appendMsg('user', txt);
+            inp.value = '';
+
+            setTimeout(() => {
+                const low = txt.toLowerCase();
+                let ans = "Pertanyaan bagus! Untuk detailnya, kamu bisa langsung buka portal resmi di menu atas, atau isi Jurnal BK ya.";
+
+                if(low.match(/snbp|snbt|ptn|kuliah/)) {
+                    ans = "🎓 <strong>Info Kuliah PTN:</strong><br>- Buka <strong>snpmb.id</strong> untuk jadwal resmi.<br>- Buka <strong>luarkampus.id</strong> untuk daftar beasiswa swasta/negeri ter-update.";
+                } else if(low.match(/kip|beasiswa|luarkampus/)) {
+                    ans = "💳 <strong>KIP-Kuliah & Beasiswa:</strong> Cek <strong>kip-kuliah.kemdikbud.go.id</strong>. Syarat utamanya SKTM/KIP dan foto rumah asli. Kalau cari beasiswa luar negeri/swasta, cek <strong>luarkampus.id</strong>.";
+                } else if(low.match(/nib|oss|usaha|halal/)) {
+                    ans = "💼 <strong>Wirausaha:</strong> Segera daftar NIB di <strong>oss.go.id</strong>. Kalau jualan makanan, daftar Sertifikasi Halal di <strong>bpjph.halal.go.id</strong> biar usahamu legal & sukses.";
+                } else if(low.match(/loker|kerja|bkk|luar negeri|bp2mi|vokasi/)) {
+                    ans = "🏭 <strong>Kerja & Vokasi:</strong> Ikut pelatihan Kemnaker di <strong>sso.kemnaker.go.id</strong>. Mau kerja di Jepang/Korea? Daftar jalur aman di <strong>siskop2mi.bp2mi.go.id</strong>.";
+                } else if(low.match(/nikah|kua|pranikah|simkah|elsimil/)) {
+                    ans = "💍 <strong>Persiapan Keluarga Sehat:</strong> Wajib buka <strong>simkah.kemenag.go.id</strong> untuk daftar Bimwin (belajar keuangan & psikologi rumah tangga). Lalu, download aplikasi <strong>Elsimil BKKBN</strong> (elsimil.bkkbn.go.id) untuk cek kesehatan pra-nikah agar bayi bebas stunting!";
+                }
+                appendMsg('ai', ans);
+            }, 600);
+        }
+    </script>
+</body>
+</html>
